@@ -1,4 +1,4 @@
-from users_crud.config.mysqlconnection import connectToMySQL
+from flask_app.config.mysqlconnection import connectToMySQL
 
 class User:
     def __init__(self, data):
@@ -23,3 +23,13 @@ class User:
         for user in results:
             users.append( User(user) )
         return users
+
+    @classmethod
+    def delete_user(cls, id):
+        query = "DELETE FROM users WHERE id=%(id)s"
+        return connectToMySQL("users_schema").query_db(query,id)
+    
+    @classmethod
+    def show_user(cls,id):
+        query = "SELECT * FROM users WHERE id=%(id)s"
+        return connectToMySQL("users_schema").query_db(query,id)

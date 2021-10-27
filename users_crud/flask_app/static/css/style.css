@@ -1,0 +1,16 @@
+table{
+    width: 800px;
+}
+.links{
+    display: flex;
+    flex-direction: row;
+    width: 100px;
+}
+main{
+    margin-left: 20px;
+}
+.box{
+    border: 2px solid black;
+    width: 33%;
+    padding: 20px;
+}
