@@ -33,3 +33,8 @@ class User:
     def show_user(cls,id):
         query = "SELECT * FROM users WHERE id=%(id)s"
         return connectToMySQL("users_schema").query_db(query,id)
+
+    @classmethod
+    def edit_user(cls, data):
+        query = "UPDATE users SET first_name = %(first_name)s, last_name = %(last_name)s, email = %(email)s where id =%(id)s"
+        return connectToMySQL("users_schema").query_db(query,data)
