@@ -1,7 +1,19 @@
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("../img/dojo_bg.jpg");
+}
+h1{
+    font-size: 36pt;
+}
 main{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .box{
     background-color: darkslategrey;
@@ -11,9 +23,81 @@ main{
 }
 h2{
     color: whitesmoke;
+}
+#box1{
     position: relative;
     left: 70px;
 }
 label{
     color: whitesmoke;
+}
+.dojos{
+    color: darkgoldenrod;
+    font-size: 18pt;
+}
+.links{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+.btn{
+    background-color: rgb(223, 136, 23);
+    border-radius: 5pt;
+    color: whitesmoke;
+    font-weight: bold;
+}
+table{
+    color: whitesmoke;
+}
+.dojo{
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    width: 350px;
+    height: 250px;
+}
+.dojo1{
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    width: 275px;
+    height: 200px;
+}
+td{
+    border: 1px solid black;
+}
+th{
+    text-align: start;
+    border: 1px solid black;
+}
+h3{
+    margin: 0px;
+    color: whitesmoke;
+}
+#new_ninja{
+    font-size: 12pt;
+}
+select{
+    width: 125px;
+    position: relative;
+    left: 50px;
+}
+.inputs{
+    width: 117px;
+}
+#input1{
+    position: relative;
+    left: 5px;
+}
+#input2{
+    position: relative;
+    left: 7px;
+}
+#input3{
+    position: relative;
+    left: 55px;
 }

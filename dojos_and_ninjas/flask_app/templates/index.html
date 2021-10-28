@@ -13,21 +13,21 @@
     </header>
     <main>
         <div class="box">
-            <h2>New Dojo</h2>
-            <form action="/create_dojo">
+            <h2 id="box1">New Dojo</h2>
+            <form action="/create_dojo" method="POST">
                 <label for="name">New Dojos Name:</label>
                 <br><br>
             <input type="text" name="name">
             <br><br>
-            <input type="submit" value="Create Dojo">
-            <br><br>
-            <input type="button" value="Add A New Ninja" action="/add_ninja">
+            <input class="btn" type="submit" value="Create Dojo">
         </form>
+        <br>
+        <a class="dojos" id="new_ninja" href="/add_ninja">Create New Ninja</a>
     </div>
-    <div class="box">
+    <div class="box links">
             <h2>All Dojos</h2>
-            {% for dojo in Dojos %}
-                <a href="/{{ dojo.name }}">{{ dojo.name }}</a>
+            {% for dojo in dojos %}
+                <a class="dojos" href="/dojos/{{ dojo.id }}">{{ dojo.name }}</a>
             {% endfor %}
         </div>
     </main>
